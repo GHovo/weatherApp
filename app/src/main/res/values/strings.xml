@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+
+    <!--Splash Screen-->
+    <string name="splash_negative_btn_text">Cancel</string>
+    <string name="splash_positive_btn_text">Go to Settings</string>
+    <string name="splash_error_dialog_title">Connection problem</string>
+    <string name="splash_error_dialog_message">Please enable internet connection</string>
+
+    <!--General Screen-->
+    <string name="general_bad_request_dialog_message">Bad Request!!!</string>
+    <string name="general_bad_request_dialog_title">Bad Request!!!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

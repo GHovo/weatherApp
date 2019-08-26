@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="java.util.ArrayList" />
+
+        <variable
+            name="citymodel"
+            type="varmtech.com.weatherapp.general.model.WeatherCountryModel.CityModel" />
+
+        <variable
+            name="eventHandler"
+            type="varmtech.com.weatherapp.general.viewmodel.listeners.EventHandler"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_item_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:onClick="@{(view) -> eventHandler.onItemClicked(view, context, citymodel)}"
+        android:orientation="horizontal"
+        tools:context="zoftino.com.databinding.FlightsActivity"
+        android:background="@color/colorPrimary"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(citymodel.name)}"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <!--android:scaleType="centerInside"-->
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/weather_icon_size"
+            android:layout_height="@dimen/weather_icon_size"
+            android:scaleType="fitCenter"
+            app:urlImage="@{citymodel.serverWeather[0].icon}" />
+        <!--&lt;!&ndash;app:errorImage="@{@drawable/ic_launcher_background}"&ndash;&gt;-->
+
+    </LinearLayout>
+</layout>
